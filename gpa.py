@@ -79,10 +79,10 @@ def get_chem():
     st.markdown("### Engineering Chemistry")
     st.divider()
     credits = st.number_input("Enter the credits in Chemistry course (8th digit of course code) UE23CY151A :", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obtained in Chemistry ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in Chemistry ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in Chemistry ESA:", value=0, step=1, format="%d")
-    misc = st.number_input("Marks obtained in Chemistry lab/assignment:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obtained in Chemistry ISA1:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    marksi2 = st.number_input("Marks obtained in Chemistry ISA2:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    markse = st.number_input("Marks obtained in Chemistry ESA:", value=0, step=1, format="%d", min_value=0, max_value=100)
+    misc = st.number_input("Marks obtained in Chemistry lab/assignment:", value=0, step=1, format="%d", min_value=0, max_value=10)
     total = (markse/2) + (marksi1/2) +(marksi2/2) + misc
     gp = grade_point(total)
     sums = gp*credits
@@ -92,10 +92,10 @@ def get_python():
     st.markdown("### Python for Computational Problem Solving")
     st.divider()
     credits = st.number_input("Enter the credits in Python course (8th digit of course code) UE23CS151A:", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obtained in Python ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in Python ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in Python ESA:", value=0, step=1, format="%d")
-    misc = st.number_input("Marks obtained in Python project/assignment:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obtained in Python ISA1:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    marksi2 = st.number_input("Marks obtained in Python ISA2:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    markse = st.number_input("Marks obtained in Python ESA:", value=0, step=1, format="%d", min_value=0, max_value=100)
+    misc = st.number_input("Marks obtained in Python project/assignment:", value=0, step=1, format="%d", min_value=0, max_value=10)
     total = (markse/2) + (marksi1/2) + (marksi2/2) + misc
     gp = grade_point(total)
     sums = gp*credits
@@ -105,10 +105,10 @@ def get_maths():
     st.markdown("### Engineering Mathematics")
     st.divider()
     credits = st.number_input("Enter the credits in Maths course (8th digit of course code) UE23MA141A :", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obatained in Maths ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in Maths ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in Maths ESA:", value=0, step=1, format="%d")
-    misc = st.number_input("Marks obtained in Maths assignment:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obatained in Maths ISA1:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    marksi2 = st.number_input("Marks obtained in Maths ISA2:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    markse = st.number_input("Marks obtained in Maths ESA:", value=0, step=1, format="%d", min_value=0, max_value=100)
+    misc = st.number_input("Marks obtained in Maths assignment:", value=0, step=1, format="%d", min_value=0, max_value=10)
     total = (markse/2) + (marksi1/2) + (marksi2/2) + misc
     gp = grade_point(total)
     sums = gp*credits
@@ -118,10 +118,10 @@ def get_epd():
     st.markdown("### Electronic Principles and Devices")
     st.divider()
     credits = st.number_input("Enter the credits in EPD course (8th digit of course code) UE23EC141A :", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obatained in EPD ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in EPD ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in EPD ESA:", value=0, step=1, format="%d")
-    misc = st.number_input("Marks obtained in EPD assignment:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obatained in EPD ISA1:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    marksi2 = st.number_input("Marks obtained in EPD ISA2:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    markse = st.number_input("Marks obtained in EPD ESA:", value=0, step=1, format="%d", min_value=0, max_value=100)
+    misc = st.number_input("Marks obtained in EPD assignment:", value=0, step=1, format="%d", min_value=0, max_value=10)
     total = (markse/2) + (marksi1/2) + (marksi2/2) + misc
     gp = grade_point(total)
     sums = gp*credits
@@ -131,10 +131,10 @@ def get_mechanics():
     st.markdown("### Engineering Mechanics-Statics")
     st.divider()
     credits = st.number_input("Enter the credits in Mechanics course (8th digit of course code) UE23CV131A :", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obatained in Mechanics ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in Mechanics ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in Mechanics ESA:", value=0, step=1, format="%d")
-    misc = st.number_input("Marks obtained in Mechanics assignment:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obatained in Mechanics ISA1:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    marksi2 = st.number_input("Marks obtained in Mechanics ISA2:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    markse = st.number_input("Marks obtained in Mechanics ESA:", value=0, step=1, format="%d", min_value=0, max_value=100)
+    misc = st.number_input("Marks obtained in Mechanics assignment:", value=0, step=1, format="%d", min_value=0, max_value=10)
     total = (markse/2) + (marksi1/2) + (marksi2/2) + misc
     gp = grade_point(total)
     sums = gp*credits
@@ -144,9 +144,9 @@ def get_constitution():
     st.markdown("### Constitution of India, Cyber Law and Professional Ethics")
     st.divider()
     credits = st.number_input("Enter the credits in Constitution course (8th digit of course code) UE23CE111A :", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obtained in Constitution ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in Constitution ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in Constitution ESA:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obtained in Constitution ISA1:", value=0, step=1, format="%d", min_value=0, max_value=30)
+    marksi2 = st.number_input("Marks obtained in Constitution ISA2:", value=0, step=1, format="%d", min_value=0, max_value=30)
+    markse = st.number_input("Marks obtained in Constitution ESA:", value=0, step=1, format="%d", min_value=0, max_value=60)
     total = ((markse/2)*50)/30 + ((marksi1/2)*25)/15 +((marksi2/2)*25)/15
     gp = grade_point(total)
     sums = gp*credits
@@ -156,10 +156,10 @@ def get_phy():
     st.markdown("### Engineering Physics")
     st.divider()
     credits = st.number_input("Enter the credits in Physics course (8th digit of course code) UE23PH151A :", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obtained in Physics ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in Physics ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in Physics ESA:", value=0, step=1, format="%d")
-    misc = st.number_input("Marks obtained in Physics lab/assignment:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obtained in Physics ISA1:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    marksi2 = st.number_input("Marks obtained in Physics ISA2:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    markse = st.number_input("Marks obtained in Physics ESA:", value=0, step=1, format="%d", min_value=0, max_value=100)
+    misc = st.number_input("Marks obtained in Physics lab/assignment:", value=0, step=1, format="%d", min_value=0, max_value=10)
     total = (markse/2) + (marksi1/2) +(marksi2/2) + misc
     gp = grade_point(total)
     sums = gp*credits
@@ -169,10 +169,10 @@ def get_elec():
     st.markdown("### Elements of Electrical Engineering")
     st.divider()
     credits = st.number_input("Enter the credits in Electrical course (8th digit of course code) UE23EE141A :", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obatained in Electrical ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in Electrical ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in Electrical ESA:", value=0, step=1, format="%d")
-    misc = st.number_input("Marks obtained in Electrical assignment:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obatained in Electrical ISA1:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    marksi2 = st.number_input("Marks obtained in Electrical ISA2:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    markse = st.number_input("Marks obtained in Electrical ESA:", value=0, step=1, format="%d", min_value=0, max_value=100)
+    misc = st.number_input("Marks obtained in Electrical assignment:", value=0, step=1, format="%d", min_value=0, max_value=10)
     total = (markse/2) + (marksi1/2) + (marksi2/2) + misc
     gp = grade_point(total)
     sums = gp*credits
@@ -182,10 +182,10 @@ def get_mechanical():
     st.markdown("### Mechanical Engineering Sciences")
     st.divider()
     credits = st.number_input("Enter the credits in Mechanical course (8th digit of course code) UE23ME131A :", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obatained in Mechanical ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in Mechanical ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in Mechanical ESA:", value=0, step=1, format="%d")
-    misc = st.number_input("Marks obtained in Mechanical assignment:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obatained in Mechanical ISA1:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    marksi2 = st.number_input("Marks obtained in Mechanical ISA2:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    markse = st.number_input("Marks obtained in Mechanical ESA:", value=0, step=1, format="%d", min_value=0, max_value=100)
+    misc = st.number_input("Marks obtained in Mechanical assignment:", value=0, step=1, format="%d", min_value=0, max_value=10)
     total = (markse/2) + (marksi1/2) + (marksi2/2) + misc
     gp = grade_point(total)
     sums = gp*credits
@@ -195,9 +195,9 @@ def get_evs():
     st.markdown("### Environmental Studies & Life Sciences")
     st.divider()
     credits = st.number_input("Enter the credits in Environmental Studies course (8th digit of course code) UE23EV111A :", min_value=1, max_value=5)
-    marksi1 = st.number_input("Marks obtained in Environmental Studies ISA1:", value=0, step=1, format="%d")
-    marksi2 = st.number_input("Marks obtained in Environmental Studies ISA2:", value=0, step=1, format="%d")
-    markse = st.number_input("Marks obtained in Environmental Studies ESA:", value=0, step=1, format="%d")
+    marksi1 = st.number_input("Marks obtained in Environmental Studies ISA1:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    marksi2 = st.number_input("Marks obtained in Environmental Studies ISA2:", value=0, step=1, format="%d", min_value=0, max_value=40)
+    markse = st.number_input("Marks obtained in Environmental Studies ESA:", value=0, step=1, format="%d", min_value=0, max_value=60)
     total = ((markse/2)*50)/30 + ((marksi1/2)*25)/15 +((marksi2/2)*25)/15
     gp = grade_point(total)
     sums = gp*credits
