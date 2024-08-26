@@ -1,3 +1,5 @@
+# NOTE: If cloning this repository, kinldy install "re" module and "streamlit" module before working on the code. All the best!
+
 import streamlit as st
 import re
 
